@@ -9,7 +9,7 @@ public class Solution {
     }
 
 
-    public int[] merge(int[] nums1, int m, int[] nums2, int n) {
+    public int[] mergeNewArray(int[] nums1, int m, int[] nums2, int n) {
 
         int[] result = new int[m + n];
 
@@ -19,5 +19,12 @@ public class Solution {
         Arrays.sort(result);
 
         return result;
+    }
+
+    public void mergeSameArray(int[] nums1, int m, int[] nums2, int n) {
+
+        if (n >= 0) System.arraycopy(nums2, 0, nums1, m, n);
+
+        Arrays.sort(nums1);
     }
 }
